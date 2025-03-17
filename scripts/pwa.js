@@ -21,11 +21,22 @@ window.addEventListener('load', () => {
   
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
-      e.preventDefault();
-      // Stash the event so it can be triggered later
-      deferredPrompt = e;
+        e.preventDefault();
+        console.log('Install prompt detected!'); // Add this for debugging
+        // Stash the event so it can be triggered later
+        deferredPrompt = e;
       // Update UI to notify the user they can add to home screen
-      installButton.style.display = 'block';
+        installButton.style.display = 'block';
+        installButton.style.position = 'fixed';
+        installButton.style.bottom = '20px';
+        installButton.style.right = '20px';
+        installButton.style.zIndex = '9999';
+        installButton.style.padding = '10px 20px';
+        installButton.style.backgroundColor = '#FFD700';
+        installButton.style.color = '#19191f';
+        installButton.style.fontFamily = "'Press Start 2P', cursive";
+        installButton.style.border = 'none';
+        installButton.style.borderRadius = '4px';
   
       installButton.addEventListener('click', () => {
         // Hide the install button
