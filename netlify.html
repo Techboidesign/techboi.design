@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Project - Techboi.design</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="icon" type="image/x-icon" href="img/Avatar.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/transitions.js"></script>
+    <script src="scripts/carousel.js"></script> <!-- Carousel script for image slider -->
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#FFD700">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Techboi Design">
+    <meta name="application-name" content="Techboi Design">
+    <meta name="msapplication-TileColor" content="#FFD700">
+    <meta name="msapplication-TileImage" content="/img/pwa/icon-144x144.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/img/pwa/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/pwa/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/img/pwa/icon-192x192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/icon-16x16.png">
+
+    <!-- PWA Stylesheets -->
+    <link rel="stylesheet" href="css/pwa.css">
+
+</head>
+
+<body>
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1>Netlify Brand & Marketing Evolution</h1>
+    </header>
+
+    <!-- Project Introduction -->
+    <div class="project-intro">
+        <div class="project-description">
+            <p>During my tenure at Netlify, I played a pivotal role in evolving the brand identity and marketing design while maintaining consistency across all platforms. This project showcases the multi-disciplinary approach taken to enhance Netlify's visual presence in the developer tools market.</p>
+        </div>
+        <div class="project-meta">
+            <div class="meta-item">
+                <h4>Role</h4>
+                <p>UI/Marketing Designer</p>
+            </div>
+            <div class="meta-item">
+                <h4>Timeline</h4>
+                <p>2019 - 2022</p>
+            </div>
+            <div class="meta-item">
+                <h4>Tools</h4>
+                <p>Figma, After Effects, Chart.js</p>
+            </div>
+            <div class="meta-item">
+                <h4>Deliverables</h4>
+                <p>Brand Guidelines, Marketing Assets, Web Design</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Distribution Section -->
+    <section class="project-section">
+        <h2>Work Distribution</h2>
+        <p>My role at Netlify encompassed various aspects of design and marketing, requiring a balanced approach across different disciplines.</p>
+        <div style="max-width: 800px; height: 600px; margin: 2rem auto;">
+            <canvas id="workDistributionChart"></canvas>
+        </div>
+    </section>
+
+<!-- Image Carousel Section -->
+<section class="project-section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h2>Project Highlights</h2>
+        <div style="display: flex; gap: 8px;">
+            <button class="carousel-button prev">←</button>
+            <button class="carousel-button next">→</button>
+        </div>
+    </div>
+    <div style="color: var(--grey-300); font-size: 0.8rem; margin-bottom: 2rem;">
+        Image <span id="currentImageNum">1</span> of <span id="totalImages"></span>
+    </div>
+    <div class="carousel-container" style="position: relative; overflow: hidden; margin: 2rem 0;">
+        <div class="carousel" style="display: flex; transition: transform 0.5s ease;">
+           
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-1.jpg" alt="Netlify Design 1" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-2.jpg" alt="Netlify Design 2" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-3.jpg" alt="Netlify Design 3" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-4.jpg" alt="Netlify Design 4" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-5.jpg" alt="Netlify Design 5" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-6.jpg" alt="Netlify Design 6" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-7.jpg" alt="Netlify Design 7" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-8.jpg" alt="Netlify Design 8" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-9.jpg" alt="Netlify Design 9" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-10.jpg" alt="Netlify Design 10" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-11.jpg" alt="Netlify Design 11" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-12.jpg" alt="Netlify Design 12" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-13.jpg" alt="Netlify Design 13" style="width: 100%; height: auto;">
+            </div>
+            <div class="carousel-slide" style="min-width: 100%;">
+                <img src="img/projects/netlify/netlify-14.jpg" alt="Netlify Design 14" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- PWA Scripts (add these just before the closing </body> tag) -->
+<script src="scripts/pwa.js" defer></script>
+<script src="scripts/splash.js" defer></script>
+
+</body>
+</html>
