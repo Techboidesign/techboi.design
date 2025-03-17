@@ -11,7 +11,7 @@
     <script src="scripts/header.js" defer></script> <!-- Loads animation for header (TECHBOI DESIGN DOTS) -->
     <script src="scripts/accordions.js" defer></script> <!-- Extra animation functions (FOR ACCORDIONS) -->
     <script src="scripts/components.js"></script> <!-- Component scripts (NAVIGATION) -->
-    <script src="scripts/transitions.js"></script> <!-- Transition animations (Fade in + scrolling) -->
+    <script src="scripts/contact-form-check.js"></script> <!-- Check contact form elements (CONTACT) -->
 
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#FFD700">
@@ -39,42 +39,38 @@
     <link rel="stylesheet" href="css/pwa.css">
 
 </head>
+
 <body>
 
-    <header>
-        <div class="header-content">
-            <canvas id="portfolioCanvas"></canvas>
-        </div>
-        <div class="scroll-indicator" onclick="scrollToPortfolio()">></div>
-    </header>
-
-
-    <!-- PORTFOLIO section -->
-    <section id="portfolio" class="portfolio">
-        <div class="portfolio-grid">
-            <div class="project lg">
-                <div class="project-title">Prisma.io</div>
-                <a href="prisma.html"><img src="img/projects/covers/project1.png" alt="Prisma.io redesign"></a>
+     <!-- Contact card -->
+     <section id="contact" class="contact">
+        <div class="contact-content">
+            <!-- Left column: Contact Info -->
+            <div class="contact-column">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Let's talk about your project or potential collaboration.</br></br></p>
+                    <div class="social-links" style="margin-top: 2rem;">
+                        <a href="#" style="color: var(--dark);">Download CV</a>
+                    </div>
+                </div>
             </div>
-            <div class="project md">
-                <div class="project-title">Netlify</div>
-                <a href="netlify.html"><img src="img/projects/covers/project2.png" alt="Netlify"></a>
-            </div>
-            <div class="project sm">
-                <div class="project-title">Commonshare App</div>
-                <img src="img/projects/covers/project3.png" alt="Commonshare app">
-            </div>
-            <div class="project sm">
-                <div class="project-title">Jamstack</div>
-                <img src="img/projects/covers/project4.png" alt="Jamstack">
-            </div>
-            <div class="project md">
-                <div class="project-title">Gamification World Congress</div>
-                <img src="img/projects/covers/project5.png" alt="Gamification World Congress">
-            </div>
-            <div class="project sm">
-                <div class="project-title">Illustrations</div>
-                <img src="img/projects/covers/project6.png" alt="Illustrations">
+            <!-- Right column: Contact Form -->
+            <div class="contact-column">
+                <div class="contact-form">
+                  <form id="contactForm" onsubmit="return validateForm(event)">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <span class="error" id="nameError"></span>
+                    
+                    <input type="email" id="email" placeholder="Email" required>
+                    <span class="error" id="emailError"></span>
+                    
+                    <textarea id="message" rows="5" placeholder="Message" required></textarea>
+                    <span class="error" id="messageError"></span>
+                    
+                    <button class="button-send" type="submit">Send Message</button>
+                  </form>
+                </div>
             </div>
         </div>
     </section>

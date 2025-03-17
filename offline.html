@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Techboi.design</title>
+    <link rel="icon" type="image/x-icon" href="img/Avatar.png">
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#FFD700">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Techboi Design">
+    <meta name="application-name" content="Techboi Design">
+    <meta name="msapplication-TileColor" content="#FFD700">
+    <meta name="msapplication-TileImage" content="/img/pwa/icon-144x144.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/img/pwa/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/pwa/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/img/pwa/icon-192x192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/icon-16x16.png">
+
+    <!-- PWA Stylesheets -->
+    <link rel="stylesheet" href="css/pwa.css">
+
+    <style>
+        :root {
+            --yellow: #FFD700;
+            --grey-600: #19191f;
+            --grey-800: #0f0f12;
+        }
+        
+        body {
+            font-family: 'Press Start 2P', cursive, sans-serif;
+            background: var(--grey-600);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: var(--yellow);
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .offline-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .retry-btn {
+            background-color: var(--yellow);
+            color: var(--grey-800);
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Press Start 2P', cursive, sans-serif;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        @font-face {
+            font-family: 'Press Start 2P';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
+                 url('https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2') format('woff2');
+            font-display: swap;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-icon">📶</div>
+    <h1>YOU'RE OFFLINE</h1>
+    <p>Please check your internet connection and try again.</p>
+    <button class="retry-btn" onclick="window.location.reload()">RETRY</button>
+    
+    <script>
+        // Check if the user comes back online
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+
+    
+
+<!-- PWA Scripts (add these just before the closing </body> tag) -->
+<script src="scripts/pwa.js" defer></script>
+<script src="scripts/splash.js" defer></script>
+
+</body>
+</html>
